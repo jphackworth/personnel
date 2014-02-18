@@ -1,10 +1,10 @@
 # personnel
 
-Example app demonstrating Korma, Lobos and method-defining macros.
+Example app demonstrating Korma, Lobos and macro-defined functions.
 
 ## Installation
 
-```clojure
+```bash
 git clone git@github.com:jphackworth/personnel.git
 cd personnel
 lein repl

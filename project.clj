@@ -1,5 +1,5 @@
 (defproject personnel "0.1.0-SNAPSHOT"
-  :description "example app demonstrating Korma, Lobos and method-defining macros"
+  :description "example app demonstrating Korma, Lobos and macro-defined methods"
   :url "https://github.com/jphackworth/personnel"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
