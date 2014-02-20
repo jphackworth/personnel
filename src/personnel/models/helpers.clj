@@ -25,8 +25,7 @@
   (first (find-by nsp k v)))
 
 (defn delete-id [nsp entity id] 
-  (when-let [ent (find-id id)]
-    (delete entity (where ent))))
+    (delete entity (where {:id id})))
 
 (defn delete-all [nsp entity & [attr]]
   (if (map? attr) 
