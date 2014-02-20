@@ -2,11 +2,16 @@
   (:use korma.core
         [korma.db :only (defdb)])
   (:require [personnel.models.schema :refer [db-spec employees addresses]]
-            [personnel.models.util :as utils]))
+            [personnel.models.helpers :refer [create-model-fns create-model-finder-fns]]))
 
 (defdb db db-spec)
 
-(utils/create-model-fns "addresses")
-(utils/create-model-finder-fns "addresses" [:location :street])
+(defn find-all [& [attr]]
+  (if (map? attr)
+    (select addresses (with employees) (where attr))
+    (select addresses (with employees))))
+
+(create-model-fns *ns* addresses)
+(create-model-finder-fns *ns* [:location :street])
 
 

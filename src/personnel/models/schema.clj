@@ -4,7 +4,10 @@
   (:require [korma.db :refer :all]
             [lobos.migration :as lm]))
 
+; in-memory h2 database. Requires migration each start
 (def db-spec (h2 {:subname "mem:personnel_test_db"}))
+; for persistent H2 db: "personnel.h2.db"
+;(def db-spec (h2 {:subname "personnel"})) 
 
 (declare employees addresses)
 
